@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IFacturaRepositorio, FacturaRepositorio>();
 builder.Services.AddScoped<IFacturaInsertar, FacturaInsertar>();
 
+builder.Services.AddScoped<INotaCreditoRepositorio, NotaCreditoRepositorio>();
+
 builder.Services.AddDbContext<FacturacionElectronicaQaContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"))
     );

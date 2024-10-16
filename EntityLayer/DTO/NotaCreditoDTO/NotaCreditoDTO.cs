@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.DTO
+namespace EntityLayer.DTO.NotaCreditoDTO
 {
-    public class Factura1DTO
+    public class NotaCreditoDTO
     {
+        public int CiNotaCredito { get; set; }
+
         public int CiCompania { get; set; }
 
         public int CiTipoEmision { get; set; }
@@ -26,21 +28,25 @@ namespace EntityLayer.DTO
 
         public string CiTipoIdentificacionComprador { get; set; } = null!;
 
-        public string? TxGuiaRemision { get; set; }
-
         public string TxRazonSocialComprador { get; set; } = null!;
 
         public string TxIdentificacionComprador { get; set; } = null!;
 
+        public string? TxRise { get; set; }
+
+        public string CiTipoDocumentoModificado { get; set; } = null!;
+
+        public string TxNumeroDocumentoModificado { get; set; } = null!;
+
+        public string TxFechaEmisionDocumentoModificado { get; set; } = null!;
+
         public decimal QnTotalSinImpuestos { get; set; }
 
-        public decimal QnTotalDescuento { get; set; }
-
-        public decimal QnPropina { get; set; }
-
-        public decimal QnImporteTotal { get; set; }
+        public decimal QnValorModificacion { get; set; }
 
         public string TxMoneda { get; set; } = null!;
+
+        public string TxMotivo { get; set; } = null!;
 
         public int? CiContingenciaDet { get; set; }
 
@@ -62,12 +68,8 @@ namespace EntityLayer.DTO
 
         public int? CiNumeroIntento { get; set; }
 
-        public List<FacturaDetalle1DTO> facturaDetalleModelo { get; set; }
-        public List<FacturaTotalImpuestoDTO> facturaTotalImpuestoModelo { get; set; }
-        public List<FacturaDetalleFormaPago1DTO> facturaDetalleFormaPagoModelo { get; set; }
-        public List<FacturaInfoAdicionalDTO> facturaInfoAdicionalModelo { get; set; }
-        
-
-
+        public List<NotaCreditoDetalleDTO> NotaCreditoDetalleModelo { get; set; }
+        public List<NotaCreditoTotalImpuestoDTO> notaCreditoTotalImpuestoModelo { get; set; }
+        public List<NotaCreditoInfoAdicionalDTO> NotaCreditoInfoAdicionalModelo { get; set; }
     }
 }

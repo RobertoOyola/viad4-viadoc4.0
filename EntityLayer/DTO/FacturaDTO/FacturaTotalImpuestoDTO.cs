@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.DTO
+namespace EntityLayer.DTO.FacturaDTO
 {
     public class FacturaTotalImpuestoDTO
     {

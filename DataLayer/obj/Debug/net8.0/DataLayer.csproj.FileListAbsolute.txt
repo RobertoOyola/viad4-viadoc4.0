@@ -15,3 +15,4 @@ C:\Users\viamatica\source\repos\viad4-viadoc4.0\DataLayer\obj\Debug\net8.0\refin
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\DataLayer\obj\Debug\net8.0\DataLayer.pdb
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll
+C:\Users\viamatica\source\repos\viad4-viadoc4.0\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json

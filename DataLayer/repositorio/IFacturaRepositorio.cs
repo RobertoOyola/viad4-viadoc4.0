@@ -1,4 +1,4 @@
-﻿using EntityLayer.DTO;
+﻿using EntityLayer.DTO.FacturaDTO;
 using EntityLayer.Responses;
 using System;
 using System.Collections.Generic;

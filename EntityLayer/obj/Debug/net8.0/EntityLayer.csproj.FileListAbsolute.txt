@@ -10,3 +10,4 @@ C:\Users\viamatica\source\repos\viad4-viadoc4.0\EntityLayer\obj\Debug\net8.0\Ent
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\viamatica\source\repos\viad4-viadoc4.0\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Users\viamatica\source\repos\viad4-viadoc4.0\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json

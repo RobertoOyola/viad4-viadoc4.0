@@ -1,4 +1,5 @@
-﻿using EntityLayer.DTO;
+﻿using EntityLayer.DTO.FacturaDTO;
+using EntityLayer.DTO.NotaCreditoDTO;
 using EntityLayer.Responses;
 using System;
 using System.Collections.Generic;
@@ -11,5 +12,6 @@ namespace BusinessLayer.Services
     public interface IFacturaInsertar
     {
         public Task<Response> IngresarFactura(Factura1DTO factura1DTO);
+        public Task<Response> IngresarNotaCredito(NotaCreditoDTO notaCreditoDTO);
     }
 }

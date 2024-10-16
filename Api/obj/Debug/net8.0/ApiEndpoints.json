@@ -9,7 +9,23 @@
     "Parameters": [
       {
         "Name": "factura1DTO",
-        "Type": "EntityLayer.DTO.Factura1DTO",
+        "Type": "EntityLayer.DTO.FacturaDTO.Factura1DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.FacturaController",
+    "Method": "IngresarNotaCredito",
+    "RelativePath": "api/Factura/IngresarNotaCredito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notaCreditoDTO",
+        "Type": "EntityLayer.DTO.NotaCreditoDTO.NotaCreditoDTO",
         "IsRequired": true
       }
     ],

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.DTO
+namespace EntityLayer.DTO.FacturaDTO
 {
-    public class FacturaDetalleAdicionalDTO
+    public class FacturaInfoAdicionalDTO
     {
 
         public int CiCompania { get; set; }
@@ -17,10 +17,9 @@ namespace EntityLayer.DTO
 
         public string TxSecuencial { get; set; } = null!;
 
-        public string TxCodigoPrincipal { get; set; } = null!;
-
         public string? TxNombre { get; set; }
 
         public string? TxValor { get; set; }
+
     }
 }

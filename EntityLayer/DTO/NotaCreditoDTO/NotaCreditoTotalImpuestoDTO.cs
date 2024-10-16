@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.DTO
+namespace EntityLayer.DTO.NotaCreditoDTO
 {
-    public class FacturaDetalleImpuesto1DTO
+    public class NotaCreditoTotalImpuestoDTO
     {
         public int CiCompania { get; set; }
 
@@ -16,13 +16,9 @@ namespace EntityLayer.DTO
 
         public string TxSecuencial { get; set; } = null!;
 
-        public string TxCodigoPrincipal { get; set; } = null!;
-
         public string TxCodigo { get; set; } = null!;
 
         public string TxCodigoPorcentaje { get; set; } = null!;
-
-        public string TxTarifa { get; set; } = null!;
 
         public decimal QnBaseImponible { get; set; }
 

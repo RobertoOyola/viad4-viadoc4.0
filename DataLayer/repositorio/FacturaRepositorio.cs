@@ -1,12 +1,12 @@
 ﻿using EntityLayer.Responses;
-using EntityLayer.Mappers;
-using EntityLayer.DTO;
 using EntityLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EntityLayer.DTO.FacturaDTO;
+using EntityLayer.Mappers.FacturaMapper;
 
 namespace DataLayer.repositorio
 {
@@ -20,6 +20,7 @@ namespace DataLayer.repositorio
         private readonly FacturaInfoAdicionalMapper facturaInfoAdicionalMapper = new();
         private readonly FacturaTotalImpuestoMapper facturaTotalImpuestoMapper = new();
         private readonly FacturaDetalleFormaPago1Mappper facturaDetalleFormaPago1Mappper = new();
+        private readonly FacturaReembolsoMapper facturaReembolsoMapper = new();
 
         public FacturaRepositorio(FacturacionElectronicaQaContext context)
         {
@@ -102,7 +103,6 @@ namespace DataLayer.repositorio
 
                             return response;
                         }
-
                     }
                 }
                 catch (Exception ex)
@@ -158,6 +158,36 @@ namespace DataLayer.repositorio
                 {
                     response.Code = ResponseType.Error;
                     response.Message = $"Error registro factura informacion adicional {ex.Message}";
+                    response.Data = ex.Data;
+                    return response;
+                }
+
+                try
+                {
+                    if(factura1DTO.facturaReembolsoModelo != null){
+                        for (int i = 0; i < factura1DTO.facturaReembolsoModelo.Count; i++)
+                        {
+                            try
+                            {
+                                FacturaReembolsoGasto facturaReembolsoGasto = facturaReembolsoMapper.FacturaReembolsoToFacturaReembolsoDTO(factura1DTO.facturaReembolsoModelo[i]);
+                                _context.FacturaReembolsoGastos.Add(facturaReembolsoGasto);
+
+                            }
+                            catch (Exception ex)
+                            {
+                                response.Code = ResponseType.Error;
+                                response.Message = $"Error registro factura reembolso {i} {ex.Message}";
+                                response.Data = ex.Data;
+                                return response;
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = $"Error registro factura reembolso {ex.Message}";
                     response.Data = ex.Data;
                     return response;
                 }

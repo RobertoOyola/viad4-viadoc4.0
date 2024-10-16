@@ -1,4 +1,4 @@
-﻿using EntityLayer.DTO;
+﻿using EntityLayer.DTO.FacturaDTO;
 using EntityLayer.Models;
 using Riok.Mapperly.Abstractions;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Mappers
+namespace EntityLayer.Mappers.FacturaMapper
 {
     [Mapper]
     public partial class FacturaMapper

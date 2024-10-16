@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.DTO
+namespace EntityLayer.DTO.NotaCreditoDTO
 {
-    public class FacturaDetalleFormaPago1DTO
+    public class NotaCreditoDetalleAdicionalDTO
     {
+        public int CiNotaCreditoDetalleAdicional { get; set; }
 
         public int CiCompania { get; set; }
 
@@ -17,12 +18,10 @@ namespace EntityLayer.DTO
 
         public string TxSecuencial { get; set; } = null!;
 
-        public string? TxFormaPago { get; set; }
+        public string TxCodigoInterno { get; set; } = null!;
 
-        public decimal? QnTotal { get; set; }
+        public string? TxNombre { get; set; }
 
-        public string? TxPlazo { get; set; }
-
-        public string? TxUnidadTiempo { get; set; }
+        public string? TxValor { get; set; }
     }
 }
